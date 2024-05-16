@@ -154,8 +154,7 @@ GraphicsSettingsWidget::GraphicsSettingsWidget(SettingsWindow* dialog, QWidget* 
 	SettingWidgetBinder::BindWidgetToEnumSetting(sif, m_ui.anisotropicFiltering, "EmuCore/GS", "MaxAnisotropy",
 		s_anisotropic_filtering_entries, s_anisotropic_filtering_values, "0");
 	SettingWidgetBinder::BindWidgetToIntSetting(sif, m_ui.dithering, "EmuCore/GS", "dithering_ps2", 2);
-	SettingWidgetBinder::BindWidgetToIntSetting(
-		sif, m_ui.mipmapping, "EmuCore/GS", "mipmap_hw", static_cast<int>(HWMipmapLevel::Automatic), -1);
+	SettingWidgetBinder::BindWidgetToBoolSetting(sif, m_ui.mipmapping, "EmuCore/GS", "mipmap_hw", true);
 	SettingWidgetBinder::BindWidgetToIntSetting(
 		sif, m_ui.blending, "EmuCore/GS", "accurate_blending_unit", static_cast<int>(AccBlendLevel::Basic));
 	SettingWidgetBinder::BindWidgetToIntSetting(
